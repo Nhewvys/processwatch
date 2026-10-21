@@ -1,0 +1,19 @@
+[Unit]
+Description=Create a verified ProcessWatch SQLite backup
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=processwatch
+Group=processwatch
+EnvironmentFile=/etc/processwatch/processwatch.env
+UMask=0077
+ExecStart=/opt/processwatch/.venv/bin/processwatch-backup --database /var/lib/processwatch/processwatch.sqlite3 --directory /var/backups/processwatch
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/backups/processwatch
+ReadOnlyPaths=/var/lib/processwatch /etc/processwatch/processwatch.env
+RestrictAddressFamilies=AF_UNIX
+

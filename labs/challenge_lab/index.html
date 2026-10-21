@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ProcessWatch — laboratório local de desafios</title>
+  <style>
+    body{font:16px system-ui,sans-serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#18212b}
+    section{border:1px solid #ccd5de;border-radius:8px;padding:1rem;margin:1rem 0}
+    button,select,input{font:inherit;padding:.45rem;margin:.25rem 0} .notice{background:#fff6d9;padding:.8rem}
+    #result{white-space:pre-wrap;background:#f2f5f8;padding:.8rem;min-height:2em}
+  </style>
+</head>
+<body>
+  <h1>Laboratório local de estados de acesso</h1>
+  <p class="notice">Demonstração isolada. Os cartões de desafio são marcadores simulados: não contêm CAPTCHA real, tokens, scripts de terceiros ou técnicas de resolução.</p>
+  <section>
+    <h2>Classificação de desafio</h2>
+    <label for="kind">Tipo simulado</label>
+    <select id="kind"><option>CAPTCHA genérico</option><option>reCAPTCHA</option><option>hCaptcha</option><option>Turnstile</option><option>Cloudflare Challenge</option></select>
+    <button id="classify">Classificar e pausar job</button>
+  </section>
+  <section>
+    <h2>Formulário e falhas</h2>
+    <label for="mode">Resultado do servidor local</label>
+    <select id="mode"><option value="valid">Validação correta</option><option value="network">Falha de rede simulada</option><option value="expired">Sessão expirada simulada</option><option value="challenge">Desafio detectado</option></select>
+    <button id="submit">Enviar demonstração</button>
+  </section>
+  <h2>Resultado</h2><output id="result" aria-live="polite">Aguardando teste.</output>
+  <script>
+    const result=document.querySelector('#result');
+    document.querySelector('#classify').addEventListener('click',()=>{
+      result.textContent=JSON.stringify({detected:true,kind:document.querySelector('#kind').value,status:'awaiting_access',provider:null,retryable:false,worker_released:true},null,2);
+    });
+    document.querySelector('#submit').addEventListener('click',async()=>{
+      try{const r=await fetch('/api/demo?mode='+encodeURIComponent(document.querySelector('#mode').value));
+        result.textContent=JSON.stringify({http_status:r.status,...await r.json()},null,2);
+      }catch(_){result.textContent='Falha de rede ao acessar o servidor local.';}
+    });
+  </script>
+</body></html>

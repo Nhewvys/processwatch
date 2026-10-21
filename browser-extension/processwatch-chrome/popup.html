@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="popup.css"><title>ProcessWatch</title></head>
+<body>
+  <main>
+    <header><strong>ProcessWatch</strong><span>Importação Assistida</span></header>
+    <label>Endereço local do ProcessWatch<input id="api-url" value="http://127.0.0.1:8000" autocomplete="url"></label>
+    <label>Código de acesso local<input id="token" type="password" autocomplete="off" placeholder="PROCESSWATCH_ACCESS_TOKEN"></label>
+    <p id="status" role="status" aria-live="polite">Abra uma consulta pública do TRF4.</p>
+    <button id="diagnose" class="secondary" type="button">Diagnosticar página TRF4</button>
+    <section id="diagnostic-panel" hidden>
+      <h2>Diagnóstico sanitizado</h2>
+      <p class="foot">O diagnóstico fica neste popup. Ele não é enviado ao ProcessWatch.</p>
+      <textarea id="diagnostic-json" readonly aria-label="JSON sanitizado do diagnóstico"></textarea>
+      <button id="copy-diagnostic" class="secondary" type="button">Copiar JSON</button>
+      <div id="manual-candidates" hidden>
+        <h2>Seleção assistida</h2>
+        <p class="warning">Use somente se reconhecer o processo principal. A importação será bloqueada se o número não estiver cadastrado na carteira local.</p>
+        <div id="candidate-list"></div>
+      </div>
+    </section>
+    <button id="capture" type="button">Capturar movimentações</button>
+    <section id="preview" hidden>
+      <h2>Prévia da captura</h2><dl id="summary"></dl>
+      <p class="warning">A captura inclui somente os movimentos presentes nesta página. Carregue mais no portal e capture novamente para ampliar o histórico. A extensão não declara a paginação completa.</p>
+      <button id="import" type="button">Importar para o ProcessWatch</button>
+    </section>
+    <button id="open" class="secondary" type="button">Abrir ProcessWatch</button>
+    <p class="foot">A captura só é enviada após sua confirmação. O código de acesso fica apenas na memória enquanto este popup estiver aberto.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

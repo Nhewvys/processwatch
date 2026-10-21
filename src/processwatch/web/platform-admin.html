@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Administração da Plataforma — ProcessWatch</title>
+  <link rel="stylesheet" href="/assets/platform-admin.css">
+  <script src="/assets/platform-admin.js" defer></script>
+</head>
+<body>
+  <div id="login-view" class="login-wrap" hidden>
+    <form id="login-form" class="login-card">
+      <div class="brand-mark">PW</div>
+      <p class="eyebrow">PROCESSWATCH</p>
+      <h1>Administração da plataforma</h1>
+      <p class="muted">Acesso reservado à identidade administrativa global.</p>
+      <label>E-mail<input name="email" type="email" autocomplete="username" required></label>
+      <label>Senha<input name="password" type="password" autocomplete="current-password" required></label>
+      <button class="button primary" type="submit">Entrar</button>
+      <p id="login-error" class="error" role="status"></p>
+    </form>
+  </div>
+  <div id="admin-view" class="shell" hidden>
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">PW</div><div><strong>ProcessWatch</strong><small>Administração geral</small></div></div>
+      <nav id="navigation">
+        <button data-panel="overview" class="active">Visão geral</button>
+        <button data-panel="offices">Escritórios</button>
+        <button data-panel="users">Usuários</button>
+        <button data-panel="motor">Motor e coletas</button>
+        <button data-panel="integrations">Integrações</button>
+        <button data-panel="processes">Processos</button>
+        <button data-panel="audit">Auditoria</button>
+      </nav>
+      <div class="sidebar-bottom"><span id="admin-email"></span><button id="logout" class="quiet">Sair</button></div>
+    </aside>
+    <main class="content">
+      <header class="topbar"><span>Administração da plataforma</span><span class="status-dot"></span><span>Instalação global</span></header>
+      <div id="notice" role="status" class="notice" hidden></div>
+      <section id="panel-overview" class="panel"></section>
+      <section id="panel-offices" class="panel" hidden></section>
+      <section id="panel-users" class="panel" hidden></section>
+      <section id="panel-motor" class="panel" hidden></section>
+      <section id="panel-integrations" class="panel" hidden></section>
+      <section id="panel-processes" class="panel" hidden></section>
+      <section id="panel-audit" class="panel" hidden></section>
+    </main>
+  </div>
+  <div id="office-drawer" class="drawer-backdrop" hidden>
+    <section class="office-drawer" role="dialog" aria-modal="true" aria-labelledby="office-drawer-title">
+      <header class="drawer-head"><div><p class="eyebrow">ESCRITÓRIO</p><h2 id="office-drawer-title">Detalhes</h2></div><button id="office-drawer-close" class="button" type="button" aria-label="Fechar detalhes">Fechar</button></header>
+      <div id="office-drawer-content" aria-live="polite"></div>
+    </section>
+  </div>
+</body>
+</html>

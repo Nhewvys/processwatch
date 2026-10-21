@@ -1,0 +1,74 @@
+# Python environments, caches and generated packaging output
+.venv/
+.venv*/
+**/.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+*.egg-info/
+build/
+dist/
+
+# Local configuration and credentials. Keep public templates versioned.
+.env
+.env.*
+!.env.example
+!.env.production.example
+.secrets/
+.credentials/
+*.pem
+*.key
+*.p12
+*.pfx
+*.token
+
+# SQLite databases, journals, backups and dumps (public catalogs in data/ remain tracked)
+*.sqlite
+*.sqlite3
+*.db
+*-wal
+*-shm
+*-journal
+*.sqlite-*
+*.sqlite3-*
+*.db-*
+*.backup
+*.backup.*
+*.bak
+*.dump
+*.sql.gz
+
+# Logs and temporary/runtime output
+*.log
+logs/
+*.tmp
+*.temp
+*.swp
+*.swo
+*.orig
+*.rej
+
+# Test-only scratch data and local environments
+.test-temp/
+**/.test-temp/
+.venv314-broken/
+pip/
+artifacts/
+tests/tmp*/
+numeros.txt
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.fleet/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local visual/API validation evidence may contain real process records
+docs/ui-correction/
+docs/evidencia-j8.json

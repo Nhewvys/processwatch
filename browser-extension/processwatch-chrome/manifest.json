@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "ProcessWatch — Importação Assistida TRF4",
+  "version": "1.0.0",
+  "description": "Importa, após confirmação, movimentações visíveis da consulta pública do TRF4 para o ProcessWatch local.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwrxO1tkJfvyY6sXTK5LkkBRBaqpi2CL6qYBqim6Y3vY8Gpx6EzihjtkgC9UJYpQF17C01+Ix/fcI2IkzFNOnjvVB/vfov6KC3OLcePuRsWe5p1zuuR8N4wlg7+6y6TivUouBvHPhEPF3IWy3gsybQkO+UZqfoKLxdXAsF/OhLVwNUSlnO/Ai097I4R7Od26F3stvjj7ANIn5bNxl0upaLLK/SvESF368WSkjykwb0Zx80N2Fv5avBvmxm3ylD4rE2kkNoUIiu9JxkZvN+oT4jDRyN9nnNJY2CrQAN8Q1zAVCRfegKIaRZG+QnRlBAVqJFpoty961R/eaD6QfqYK7IQIDAQAB",
+  "action": { "default_title": "ProcessWatch — Importação Assistida", "default_popup": "popup.html" },
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://127.0.0.1:8000/*"],
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'self'; connect-src http://127.0.0.1:8000" }
+}

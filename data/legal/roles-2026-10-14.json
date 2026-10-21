@@ -1,0 +1,834 @@
+{
+  "schema_version": 1,
+  "version": "2026-10-15-curated-3",
+  "scope": "Extensive explicit-label catalog for covered process, appeal and incident roles; unknown labels remain unclassified.",
+  "reference": "https://docs.pje.jus.br/configura%C3%A7%C3%B5es-do-pje/Regras%20de%20interface/",
+  "roles": [
+    {
+      "id": "autor",
+      "aliases": [
+        "autor",
+        "autora",
+        "parte autora",
+        "parte autor",
+        "parte requerente"
+      ],
+      "kind": "party",
+      "position": "active"
+    },
+    {
+      "id": "réu",
+      "aliases": [
+        "réu",
+        "ré",
+        "parte ré",
+        "parte réu",
+        "parte requerida"
+      ],
+      "kind": "party",
+      "position": "passive"
+    },
+    {
+      "id": "requerente",
+      "aliases": [
+        "requerente",
+        "promovente",
+        "promoventes",
+        "demandantes"
+      ],
+      "kind": "party",
+      "position": "active"
+    },
+    {
+      "id": "requerido",
+      "aliases": [
+        "requerido",
+        "requerida",
+        "promovido",
+        "promovida",
+        "promovidos",
+        "promovidas"
+      ],
+      "kind": "party",
+      "position": "passive"
+    },
+    {
+      "id": "exequente",
+      "aliases": [
+        "exequente",
+        "credor exequente",
+        "credora exequente"
+      ],
+      "kind": "party",
+      "position": "active"
+    },
+    {
+      "id": "executado",
+      "aliases": [
+        "executado",
+        "executada",
+        "devedor executado",
+        "devedora executada"
+      ],
+      "kind": "party",
+      "position": "passive"
+    },
+    {
+      "id": "impetrante",
+      "aliases": [
+        "impetrante"
+      ],
+      "kind": "party",
+      "position": "active"
+    },
+    {
+      "id": "impetrado",
+      "aliases": [
+        "impetrado",
+        "impetrada"
+      ],
+      "kind": "party",
+      "position": "passive"
+    },
+    {
+      "id": "reclamante",
+      "aliases": [
+        "reclamante"
+      ],
+      "kind": "party",
+      "position": "active"
+    },
+    {
+      "id": "reclamado",
+      "aliases": [
+        "reclamado",
+        "reclamada"
+      ],
+      "kind": "party",
+      "position": "passive"
+    },
+    {
+      "id": "demandante",
+      "aliases": [
+        "demandante"
+      ],
+      "kind": "party",
+      "position": "active"
+    },
+    {
+      "id": "demandado",
+      "aliases": [
+        "demandado",
+        "demandada"
+      ],
+      "kind": "party",
+      "position": "passive"
+    },
+    {
+      "id": "agravante",
+      "aliases": [
+        "agravante",
+        "agravante no recurso"
+      ],
+      "kind": "party",
+      "position": "recourse_active"
+    },
+    {
+      "id": "agravado",
+      "aliases": [
+        "agravado",
+        "agravada",
+        "agravado no recurso"
+      ],
+      "kind": "party",
+      "position": "recourse_passive"
+    },
+    {
+      "id": "apelante",
+      "aliases": [
+        "apelante",
+        "apelante no recurso"
+      ],
+      "kind": "party",
+      "position": "recourse_active"
+    },
+    {
+      "id": "apelado",
+      "aliases": [
+        "apelado",
+        "apelada",
+        "apelado no recurso"
+      ],
+      "kind": "party",
+      "position": "recourse_passive"
+    },
+    {
+      "id": "recorrente",
+      "aliases": [
+        "recorrente"
+      ],
+      "kind": "party",
+      "position": "recourse_active"
+    },
+    {
+      "id": "recorrido",
+      "aliases": [
+        "recorrido",
+        "recorrida"
+      ],
+      "kind": "party",
+      "position": "recourse_passive"
+    },
+    {
+      "id": "embargante",
+      "aliases": [
+        "embargante",
+        "embargante no recurso"
+      ],
+      "kind": "party",
+      "position": "recourse_active"
+    },
+    {
+      "id": "embargado",
+      "aliases": [
+        "embargado",
+        "embargada",
+        "embargado no recurso"
+      ],
+      "kind": "party",
+      "position": "recourse_passive"
+    },
+    {
+      "id": "querelante",
+      "aliases": [
+        "querelante"
+      ],
+      "kind": "party",
+      "position": "active"
+    },
+    {
+      "id": "querelado",
+      "aliases": [
+        "querelado",
+        "querelada"
+      ],
+      "kind": "party",
+      "position": "passive"
+    },
+    {
+      "id": "acusado",
+      "aliases": [
+        "acusado",
+        "acusada"
+      ],
+      "kind": "party",
+      "position": "passive"
+    },
+    {
+      "id": "investigado",
+      "aliases": [
+        "investigado",
+        "investigada"
+      ],
+      "kind": "participant",
+      "position": null
+    },
+    {
+      "id": "vítima",
+      "aliases": [
+        "vítima",
+        "ofendido",
+        "ofendida"
+      ],
+      "kind": "participant",
+      "position": null
+    },
+    {
+      "id": "paciente",
+      "aliases": [
+        "paciente"
+      ],
+      "kind": "participant",
+      "position": null
+    },
+    {
+      "id": "autoridade coatora",
+      "aliases": [
+        "autoridade coatora"
+      ],
+      "kind": "participant",
+      "position": null
+    },
+    {
+      "id": "terceiro interessado",
+      "aliases": [
+        "terceiro interessado",
+        "terceira interessada",
+        "chamado ao processo",
+        "chamada ao processo",
+        "nomeado à autoria",
+        "nomeada à autoria"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "canonical_pole": "passivo"
+    },
+    {
+      "id": "terceiro",
+      "aliases": [
+        "terceiro",
+        "terceira"
+      ],
+      "kind": "third_party",
+      "position": "third"
+    },
+    {
+      "id": "advogado",
+      "aliases": [
+        "advogado",
+        "advogada"
+      ],
+      "kind": "professional",
+      "position": null
+    },
+    {
+      "id": "procurador",
+      "aliases": [
+        "procurador",
+        "procuradora",
+        "procurador federal",
+        "procurador municipal",
+        "procurador estadual"
+      ],
+      "kind": "professional",
+      "position": null
+    },
+    {
+      "id": "defensor",
+      "aliases": [
+        "defensor",
+        "defensora",
+        "defensor público",
+        "defensora pública"
+      ],
+      "kind": "professional",
+      "position": null
+    },
+    {
+      "id": "perito",
+      "aliases": [
+        "perito",
+        "perita"
+      ],
+      "kind": "professional",
+      "position": null
+    },
+    {
+      "id": "assistente técnico",
+      "aliases": [
+        "assistente técnico",
+        "assistente técnica"
+      ],
+      "kind": "professional",
+      "position": null
+    },
+    {
+      "id": "representante legal",
+      "aliases": [
+        "representante",
+        "representante legal",
+        "representante processual",
+        "representante do autor",
+        "representante da autora",
+        "representante do réu",
+        "representante da ré"
+      ],
+      "kind": "representative",
+      "position": null
+    },
+    {
+      "id": "assistente",
+      "aliases": [
+        "assistente simples",
+        "assistente litisconsorcial"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "canonical_pole": "passivo"
+    },
+    {
+      "id": "relator",
+      "aliases": [
+        "relator",
+        "relatora"
+      ],
+      "kind": "court_actor",
+      "position": null
+    },
+    {
+      "id": "magistrado",
+      "aliases": [
+        "magistrado",
+        "magistrada",
+        "juiz",
+        "juíza",
+        "desembargador",
+        "desembargadora",
+        "ministro",
+        "ministra",
+        "juiz federal",
+        "juíza federal",
+        "desembargador federal",
+        "desembargadora federal",
+        "ministro relator",
+        "ministra relatora"
+      ],
+      "kind": "court_actor",
+      "position": null
+    },
+    {
+      "id": "litisconsorte ativo",
+      "aliases": [
+        "litisconsorte ativo",
+        "litisconsorte ativa",
+        "litisconsortes ativos",
+        "litisconsortes ativas",
+        "litisconsorte ativo no polo ativo"
+      ],
+      "kind": "party",
+      "position": "active",
+      "scope": "processo",
+      "canonical_pole": "ativo"
+    },
+    {
+      "id": "litisconsorte passivo",
+      "aliases": [
+        "litisconsorte passivo",
+        "litisconsorte passiva",
+        "litisconsortes passivos",
+        "litisconsortes passivas",
+        "litisconsorte passivo no polo passivo"
+      ],
+      "kind": "party",
+      "position": "passive",
+      "scope": "processo",
+      "canonical_pole": "passivo"
+    },
+    {
+      "id": "opoente",
+      "aliases": [
+        "opoente",
+        "opoentes",
+        "opoente no incidente"
+      ],
+      "kind": "party",
+      "position": "incident_active",
+      "scope": "incidente"
+    },
+    {
+      "id": "oposto",
+      "aliases": [
+        "oposto",
+        "oposta",
+        "opostos",
+        "opostas",
+        "oposto no incidente"
+      ],
+      "kind": "party",
+      "position": "incident_passive",
+      "scope": "incidente"
+    },
+    {
+      "id": "excipiente",
+      "aliases": [
+        "excipiente",
+        "excipientes",
+        "excipiente no incidente"
+      ],
+      "kind": "party",
+      "position": "incident_active",
+      "scope": "incidente"
+    },
+    {
+      "id": "excepto",
+      "aliases": [
+        "excepto",
+        "excepta",
+        "exceptos",
+        "exceptas",
+        "excepto no incidente"
+      ],
+      "kind": "party",
+      "position": "incident_passive",
+      "scope": "incidente"
+    },
+    {
+      "id": "impugnante",
+      "aliases": [
+        "impugnante",
+        "impugnantes",
+        "impugnante no incidente"
+      ],
+      "kind": "party",
+      "position": "incident_active",
+      "scope": "incidente"
+    },
+    {
+      "id": "impugnado",
+      "aliases": [
+        "impugnado",
+        "impugnada",
+        "impugnados",
+        "impugnadas",
+        "impugnado no incidente"
+      ],
+      "kind": "party",
+      "position": "incident_passive",
+      "scope": "incidente"
+    },
+    {
+      "id": "suscitante",
+      "aliases": [
+        "suscitante",
+        "suscitantes",
+        "suscitante no incidente"
+      ],
+      "kind": "party",
+      "position": "incident_active",
+      "scope": "incidente"
+    },
+    {
+      "id": "suscitado",
+      "aliases": [
+        "suscitado",
+        "suscitada",
+        "suscitados",
+        "suscitadas",
+        "suscitado no incidente"
+      ],
+      "kind": "party",
+      "position": "incident_passive",
+      "scope": "incidente"
+    },
+    {
+      "id": "embargante",
+      "aliases": [
+        "embargantes"
+      ],
+      "kind": "party",
+      "position": "recourse_active",
+      "scope": "recurso"
+    },
+    {
+      "id": "embargado",
+      "aliases": [
+        "embargados",
+        "embargadas"
+      ],
+      "kind": "party",
+      "position": "recourse_passive",
+      "scope": "recurso"
+    },
+    {
+      "id": "agravante",
+      "aliases": [
+        "agravantes"
+      ],
+      "kind": "party",
+      "position": "recourse_active",
+      "scope": "recurso"
+    },
+    {
+      "id": "agravado",
+      "aliases": [
+        "agravados",
+        "agravadas"
+      ],
+      "kind": "party",
+      "position": "recourse_passive",
+      "scope": "recurso"
+    },
+    {
+      "id": "apelante",
+      "aliases": [
+        "apelantes"
+      ],
+      "kind": "party",
+      "position": "recourse_active",
+      "scope": "recurso"
+    },
+    {
+      "id": "apelado",
+      "aliases": [
+        "apelados",
+        "apeladas"
+      ],
+      "kind": "party",
+      "position": "recourse_passive",
+      "scope": "recurso"
+    },
+    {
+      "id": "recorrente",
+      "aliases": [
+        "recorrentes"
+      ],
+      "kind": "party",
+      "position": "recourse_active",
+      "scope": "recurso"
+    },
+    {
+      "id": "recorrido",
+      "aliases": [
+        "recorridos",
+        "recorridas"
+      ],
+      "kind": "party",
+      "position": "recourse_passive",
+      "scope": "recurso"
+    },
+    {
+      "id": "assistente",
+      "aliases": [
+        "assistentes simples",
+        "assistentes litisconsorciais"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo"
+    },
+    {
+      "id": "amicus curiae",
+      "aliases": [
+        "amicus curiae",
+        "amici curiae",
+        "amicus curiae admitido"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo"
+    },
+    {
+      "id": "denunciante",
+      "aliases": [
+        "denunciante",
+        "denunciantes",
+        "denunciante à lide",
+        "denunciante da lide"
+      ],
+      "kind": "participant",
+      "position": null,
+      "scope": "processo"
+    },
+    {
+      "id": "denunciado",
+      "aliases": [
+        "denunciado",
+        "denunciada",
+        "denunciados",
+        "denunciadas",
+        "denunciado à lide",
+        "denunciada à lide",
+        "denunciado da lide",
+        "denunciada da lide"
+      ],
+      "kind": "participant",
+      "position": null,
+      "scope": "processo"
+    },
+    {
+      "id": "querelante",
+      "aliases": [
+        "querelantes"
+      ],
+      "kind": "party",
+      "position": "active",
+      "scope": "processo"
+    },
+    {
+      "id": "querelado",
+      "aliases": [
+        "querelados",
+        "quereladas"
+      ],
+      "kind": "party",
+      "position": "passive",
+      "scope": "processo"
+    },
+    {
+      "id": "assistente de acusação",
+      "aliases": [
+        "assistente de acusação",
+        "assistente da acusação",
+        "assistentes de acusação",
+        "assistente acusatório",
+        "assistente da vítima"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo"
+    },
+    {
+      "id": "curador especial",
+      "aliases": [
+        "curador especial",
+        "curadora especial",
+        "curadores especiais",
+        "curadoras especiais",
+        "curador",
+        "curadora",
+        "curador especial do réu",
+        "curadora especial da ré"
+      ],
+      "kind": "representative",
+      "position": null,
+      "scope": "processo"
+    },
+    {
+      "id": "representante legal",
+      "aliases": [
+        "representantes legais"
+      ],
+      "kind": "representative",
+      "position": null,
+      "scope": "processo"
+    },
+    {
+      "id": "testemunha",
+      "aliases": [
+        "testemunha",
+        "testemunhas",
+        "testemunho",
+        "depoente"
+      ],
+      "kind": "participant",
+      "position": null,
+      "scope": "processo"
+    },
+    {
+      "id": "relator",
+      "aliases": [
+        "relator do recurso",
+        "relatora do recurso"
+      ],
+      "kind": "court_actor",
+      "position": null,
+      "scope": "recurso"
+    },
+    {
+      "id": "membro do Ministério Público",
+      "aliases": [
+        "membro do ministério público",
+        "procurador de justiça",
+        "promotor de justiça",
+        "promotora de justiça",
+        "promotor",
+        "promotora",
+        "procurador regional da república",
+        "procuradora regional da república"
+      ],
+      "kind": "court_actor",
+      "position": null,
+      "scope": "processo"
+    },
+    {
+      "id": "assistente de terceiro polo ativo",
+      "aliases": [
+        "assistente simples no polo ativo"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo",
+      "canonical_pole": "ativo"
+    },
+    {
+      "id": "assistente de terceiro polo ativo",
+      "aliases": [
+        "assistente litisconsorcial no polo ativo"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo",
+      "canonical_pole": "ativo"
+    },
+    {
+      "id": "assistente de terceiro polo ativo",
+      "aliases": [
+        "assistente do polo ativo"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo",
+      "canonical_pole": "ativo"
+    },
+    {
+      "id": "assistente de terceiro polo passivo",
+      "aliases": [
+        "assistente simples no polo passivo"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo",
+      "canonical_pole": "passivo"
+    },
+    {
+      "id": "assistente de terceiro polo passivo",
+      "aliases": [
+        "assistente litisconsorcial no polo passivo"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo",
+      "canonical_pole": "passivo"
+    },
+    {
+      "id": "assistente de terceiro polo passivo",
+      "aliases": [
+        "assistente do polo passivo"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo",
+      "canonical_pole": "passivo"
+    },
+    {
+      "id": "terceiro interessado polo ativo",
+      "aliases": [
+        "terceiro interessado no polo ativo"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo",
+      "canonical_pole": "ativo"
+    },
+    {
+      "id": "terceiro interessado polo ativo",
+      "aliases": [
+        "terceira interessada no polo ativo"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo",
+      "canonical_pole": "ativo"
+    },
+    {
+      "id": "terceiro interessado polo passivo",
+      "aliases": [
+        "terceiro interessado no polo passivo"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo",
+      "canonical_pole": "passivo"
+    },
+    {
+      "id": "terceiro interessado polo passivo",
+      "aliases": [
+        "terceira interessada no polo passivo"
+      ],
+      "kind": "third_party",
+      "position": "third",
+      "scope": "processo",
+      "canonical_pole": "passivo"
+    }
+  ]
+}

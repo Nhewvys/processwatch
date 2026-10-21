@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Official interactive Turnstile test</title></head>
+<body>
+  <h1>Official interactive test key</h1>
+  <p>Owned localhost integration test using Cloudflare's published test sitekey that forces an interactive widget.</p>
+  <div class="cf-turnstile" data-sitekey="3x00000000000000000000FF" data-callback="onTestToken"></div>
+  <output id="status">Waiting for interactive test widget…</output>
+  <script>
+    window.turnstileTestToken = '';
+    window.turnstileTestResult = null;
+    function onTestToken(token) {
+      window.turnstileTestToken = token;
+      document.querySelector('#status').textContent = 'Test token callback received';
+      fetch('/api/turnstile-test-verify', {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({token})
+      }).then(async response => {
+        window.turnstileTestResult = {http_status: response.status, ...(await response.json())};
+        document.querySelector('#status').textContent = JSON.stringify(window.turnstileTestResult);
+      }).catch(() => {
+        window.turnstileTestResult = {http_status: null, success: false, error: 'local_validation_network_error'};
+      });
+    }
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</body>
+</html>

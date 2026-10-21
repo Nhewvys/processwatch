@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "processwatch"
+version = "0.1.0"
+description = "Motor local e modular de monitoramento processual"
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.27,<1.0"]
+
+[project.optional-dependencies]
+web = ["fastapi>=0.115,<1.0", "uvicorn>=0.30,<1.0"]
+test = ["fastapi>=0.115,<1.0", "httpx>=0.27,<1.0", "playwright>=1.52,<2.0"]
+court-browser = ["playwright>=1.52,<2.0"]
+court-browser-pydoll = ["pydoll-python==3.0.0"]
+
+[project.scripts]
+processwatch = "processwatch.cli:main"
+processwatch-backup = "processwatch.backup:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+processwatch = ["web/*.html", "web/*.png", "web/*.css", "web/*.js", "web/vendor/docs/*.css", "web/vendor/docs/swagger-ui/*", "web/vendor/docs/redoc/*", "_data/legal/*.json", "_data/sources/*.json"]

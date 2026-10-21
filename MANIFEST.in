@@ -1,0 +1,22 @@
+include README.md
+recursive-include src/processwatch *.py *.html *.png *.css *.js *.svg *.txt
+recursive-include data *.json *.yml *.yaml
+exclude .env
+exclude .env.*
+exclude numeros.txt
+global-exclude *.sqlite *.sqlite-* *.sqlite3 *.sqlite3-* *.db *.db-* *.backup *.log *.py[cod]
+prune .venv
+prune .venv314-broken
+prune .test-temp
+prune artifacts
+prune build
+prune dist
+prune docs
+prune examples
+prune labs
+prune pip
+prune tests
+prune browser-extension
+include .env.production.example
+include scripts/backup_sqlite.py
+recursive-include deploy *.service *.timer *.example

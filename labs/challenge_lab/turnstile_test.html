@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Owned local Turnstile test</title></head>
+<body>
+  <h1>Local Turnstile integration test</h1>
+  <p>This page uses Cloudflare's published dummy test sitekey. It never presents a real challenge.</p>
+  <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-callback="onTestToken"></div>
+  <button id="verify" type="button" disabled>Verify test token</button>
+  <output id="status">Waiting for official test widget…</output>
+  <script>
+    window.turnstileTestToken = '';
+    window.turnstileTestResult = null;
+    function onTestToken(token) {
+      window.turnstileTestToken = token;
+      document.querySelector('#status').textContent = 'Dummy test token received';
+      document.querySelector('#verify').disabled = false;
+    }
+    document.querySelector('#verify').addEventListener('click', async () => {
+      const response = await fetch('/api/turnstile-test-verify', {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({token: window.turnstileTestToken})
+      });
+      window.turnstileTestResult = {http_status: response.status, ...(await response.json())};
+      document.querySelector('#status').textContent = JSON.stringify(window.turnstileTestResult);
+    });
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</body>
+</html>
